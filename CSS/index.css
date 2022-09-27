@@ -1,0 +1,249 @@
+#subtitle {
+  margin: 0;
+}
+#image-text-frame {
+  position: relative;
+  text-align: center;
+  background-color: black;
+  height: 80vh;
+  overflow: hidden;
+  padding: 0;
+}
+.text-image-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#image-text-frame img {
+  height: 80vh;
+  opacity: 0.35;
+  object-fit: cover;
+}
+.arrow-button {
+  height: inherit;
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**/
+
+#projects {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+  /*background-color: pink;*/
+}
+#projects img {
+  display: flex;
+  width: calc(100vw / 3.5);
+  height: auto;
+  position: relative;
+  float: left;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.projects-image-text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  justify-content: center;
+}
+.projects-image-text:hover img {
+  transform: scale(1.15);
+  transition: 0.5s;
+  opacity: 20%;
+}
+.projects-image-text:hover .text-centered {
+  color: black;
+  display: block;
+}
+.text-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-weight: 600;
+  font-size: 18px;
+  display: none;
+  transition: 0.5s;
+  font-family: "oswald", sans-serif;
+}
+
+/**/
+#contact-us-text {
+  text-align: center;
+}
+#contact {
+  justify-content: center;
+  background-color: #333;
+  color: white;
+}
+#contact-us {
+  margin: 0 0;
+  text-align: center;
+}
+.form {
+  display: flex;
+  width: 80%;
+
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin: 20px auto;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 12px;
+  font-family: "open sans", sans-serif;
+  background-color: lightgray;
+}
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  margin: 0 0;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 900px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 900px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type="checkbox"]),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 10px 20px;
+  border: none;
+  background: rgb(14, 192, 216);
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 2px;
+  font-size: 20px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
+#submit {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+label {
+  font-size: 20px;
+}
+#form-replacement {
+  display: none;
+}
+/**/
+@media screen and (max-width: 800px) {
+  .flex-outer > li > label,
+  .flex-outer li p {
+    flex: 1 0 500px;
+  }
+
+  .flex-outer > li > label + *,
+  .flex-inner {
+    flex: 1 0 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form {
+    display: none;
+  }
+  #form-replacement {
+    display: block;
+    color: white;
+    padding-left: 6vw;
+    padding-top: 10px;
+  }
+  #projects-description {
+    height: fit-content;
+    padding: 20px;
+    overflow-wrap: break-word;
+  }
+  #title {
+    white-space: normal;
+    font-size: 50px;
+  }
+  #subtitle {
+    white-space: normal;
+    font-size: 16px;
+  }
+  .arrow-button {
+    top: 130%;
+  }
+  #arrow-button {
+    font-size: 36px;
+  }
+  #projects {
+    height: fit-content;
+    flex-direction: column;
+  }
+  #projects img {
+    height: 15vh;
+    width: 90vw;
+    margin: 0;
+  }
+
+  #explore-our-projects {
+    top: 1rem;
+    font-size: 12px;
+  }
+  #projects-description {
+    margin-top: 50px;
+  }
+  .form {
+    width: fit-content;
+    margin: auto auto;
+  }
+}

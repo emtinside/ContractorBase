@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  background-color: #fca311;
+  justify-content: center;
+  align-items: center;
+}
+#footer {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#copyright-symbol {
+  display: inline;
+  height: 30px;
+  width: auto;
+}
